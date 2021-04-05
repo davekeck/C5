@@ -19,7 +19,7 @@ from scipy.io import loadmat as loadmat
 from os.path import join
 
 # change the dataset_name based on the model name
-dataset_name = join('..', 'results', 'c5')
+dataset_name = join('..', 'results', 'C5_m_7_h_64')
 
 
 def error_metrics(errors):
@@ -52,7 +52,7 @@ def ang_error(a, b):
   return (180 / np.pi) * np.arccos(cossim)
 
 
-def multiple_test_evaluation(dataset_name, cross_validation=True):
+def multiple_test_evaluation(dataset_name, cross_validation=False):
 
   mean_errors = []
   median_errors = []
